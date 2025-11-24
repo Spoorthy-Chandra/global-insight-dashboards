@@ -24,8 +24,8 @@ export const saveUser = (user: User): boolean => {
 
 export const validateLogin = (email: string, password: string): boolean => {
   // Demo credentials
-  if (email === 'admin' && password === 'admin123') {
-    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify({ email, name: 'Admin' }));
+  if (email === 'demo@project.com' && password === 'Dashboard123') {
+    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify({ email, name: 'Demo User' }));
     return true;
   }
   

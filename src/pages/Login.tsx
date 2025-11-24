@@ -22,7 +22,7 @@ const Login = () => {
         toast.success("Login successful!");
         navigate("/home");
       } else {
-        toast.error("Invalid credentials. Try: admin / admin123");
+        toast.error("Invalid credentials. Try: demo@project.com / Dashboard123");
       }
       setLoading(false);
     }, 500);
@@ -48,7 +48,7 @@ const Login = () => {
                 type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin"
+                placeholder="demo@project.com"
                 required
                 className="mt-2"
               />
@@ -61,7 +61,7 @@ const Login = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="admin123"
+                placeholder="Dashboard123"
                 required
                 className="mt-2"
               />
@@ -89,7 +89,7 @@ const Login = () => {
             <p className="text-xs text-muted-foreground text-center">
               <strong>Demo Credentials:</strong>
               <br />
-              Username: admin | Password: admin123
+              Email: demo@project.com | Password: Dashboard123
             </p>
           </div>
         </div>
