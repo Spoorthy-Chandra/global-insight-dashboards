@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { logout, getCurrentUser, isAuthenticated } from "@/lib/auth";
 import { BarChart3, LogOut, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ export const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <ThemeToggle />
             {authenticated && (
               <div className="flex items-center gap-4">
                 <span className="text-sm text-muted-foreground">

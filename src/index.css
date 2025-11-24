@@ -8,84 +8,97 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 25% 10%;
-    --foreground: 210 100% 98%;
-
-    --card: 220 20% 15%;
-    --card-foreground: 210 100% 98%;
-
-    --popover: 220 20% 15%;
-    --popover-foreground: 210 100% 98%;
-
-    --primary: 190 95% 50%;
-    --primary-foreground: 220 25% 10%;
-
-    --secondary: 200 90% 45%;
-    --secondary-foreground: 210 100% 98%;
-
-    --muted: 220 15% 25%;
-    --muted-foreground: 210 20% 70%;
-
-    --accent: 35 100% 55%;
-    --accent-foreground: 220 25% 10%;
-
+    --background: 210 40% 98%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 200 80% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 280 65% 75%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 180 70% 70%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 200 80% 65%;
+    --radius: 0.75rem;
+    --chart-1: 200 70% 60%;
+    --chart-2: 160 60% 55%;
+    --chart-3: 280 65% 65%;
+    --chart-4: 340 75% 65%;
+    --chart-5: 30 80% 60%;
 
-    --border: 220 15% 25%;
-    --input: 220 15% 25%;
-    --ring: 190 95% 50%;
-
-    --radius: 1rem;
-
-    --gradient-primary: linear-gradient(135deg, hsl(190, 95%, 50%), hsl(200, 90%, 45%));
-    --gradient-accent: linear-gradient(135deg, hsl(35, 100%, 55%), hsl(25, 100%, 50%));
-    --gradient-bg: linear-gradient(180deg, hsl(220, 25%, 10%), hsl(220, 30%, 15%));
-    
-    --shadow-glow: 0 0 40px hsl(190 95% 50% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-
-    --sidebar-background: 220 20% 15%;
-    --sidebar-foreground: 210 100% 98%;
-    --sidebar-primary: 190 95% 50%;
-    --sidebar-primary-foreground: 220 25% 10%;
-    --sidebar-accent: 220 15% 25%;
-    --sidebar-accent-foreground: 210 100% 98%;
-    --sidebar-border: 220 15% 25%;
-    --sidebar-ring: 190 95% 50%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222.2 47.4% 11.2%;
+    --sidebar-primary: 200 80% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 200 80% 65%;
   }
 
   .dark {
-    --background: 220 25% 10%;
-    --foreground: 210 100% 98%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
   }
 }
 
 @layer utilities {
-  .gradient-primary {
-    background: var(--gradient-primary);
-  }
-  
-  .gradient-accent {
-    background: var(--gradient-accent);
-  }
-  
   .gradient-bg {
-    background: var(--gradient-bg);
+    background: linear-gradient(135deg, hsl(200, 80%, 95%) 0%, hsl(280, 70%, 95%) 50%, hsl(180, 75%, 95%) 100%);
   }
-  
+
+  .dark .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(200, 80%, 65%) 0%, hsl(280, 65%, 75%) 100%);
+  }
+
   .glass {
-    background: hsl(var(--card) / 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid hsl(var(--border) / 0.3);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(200, 200, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(100, 150, 255, 0.1);
   }
-  
-  .glow {
-    box-shadow: var(--shadow-glow);
+
+  .dark .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
-  
+
   .card-shadow {
-    box-shadow: var(--shadow-card);
+    box-shadow: 0 4px 20px 0 rgba(100, 150, 255, 0.15);
+  }
+
+  .dark .card-shadow {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   }
 }
 
